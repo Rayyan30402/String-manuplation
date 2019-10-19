@@ -2,35 +2,42 @@
 
     Sub Main()
         Dim String1 As String
-        Dim Char1 As Char
-        Dim Counter As Integer
-        Dim vCount As Integer
-        Const vowels = "aeiou" And "AEIOU"
+        Dim String2 As String
+        Dim String3 As String
+        Dim nextchar1 As String
+        Dim nextchar2 As String
+        Dim counter1 As Integer
+        Dim counter2 As Integer
+        Dim haschanged As Boolean
 
         String1 = ""
-        Char1 = ""
-        vCount = 0
-        Counter = 0
+        String2 = ""
+        String3 = ""
+        nextchar1 = ""
+        nextchar2 = ""
+        counter1 = 0
+        counter2 = 0
+        haschanged = True / False
 
-        Console.Write("Enter string to look for vowels: ")
-        String1 = Console.ReadLine
+        For counter1 = 1 To Len(String1)
+            nextchar1 = Mid(String1, counter1, 1)
+            String3 = ""
+            haschanged = False
+               counter2 = 1 To Len(String2)
+            nextchar2 = Mid(String2, counter2, 1)
+            If nextchar2 = nextchar1 Then
 
-        For Counter = 1 To Len(String1)
-            Char1 = Mid(String1, Counter, 1)
-            If InStr(vowels, Char1) > 0 Then
-                vCount = vCount + 1
+                haschanged = False
+            Else
+                haschanged = True
+                    console.write("String3="'String3 & nextxhar1')
             End If
+
+
+
         Next
-
-        Console.WriteLine("Number of vowels in the given string = " & vCount)
+        String2 = String3
         Console.ReadKey()
-
-
-
-
-
-
-
     End Sub
 
 End Module
