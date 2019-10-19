@@ -2,38 +2,32 @@
 
     Sub Main()
         Dim String1 As String
-        Dim String2 As String
         Dim Char1 As Char
-        Dim Char2 As Char
-        Dim nextchar As Char
         Dim Counter As Integer
+        Dim vCount As Integer
+        Const vowels = "aeiou" And "AEIOU"
 
         String1 = ""
-        String2 = ""
         Char1 = ""
-        Char2 = ""
-        nextchar = ""
+        vCount = 0
         Counter = 0
 
-        Console.Write("Enter String1 : ")
+        Console.Write("Enter string to look for vowels: ")
         String1 = Console.ReadLine
 
-        Console.Write("Enter character to remove: ")
-        Char1 = Console.ReadLine
-
-        Console.Write("Enter character to replce: ")
-        Char2 = Console.ReadLine
-
         For Counter = 1 To Len(String1)
-            nextchar = Mid(String1, Counter, 1)
-            If nextchar = Char1 Then
-                nextchar = Char2
+            Char1 = Mid(String1, Counter, 1)
+            If InStr(vowels, Char1) > 0 Then
+                vCount = vCount + 1
             End If
-            String2 = String2 & nextchar
         Next
 
-        Console.WriteLine("Final string = " & String2)
+        Console.WriteLine("Number of vowels in the given string = " & vCount)
         Console.ReadKey()
+
+
+
+
 
 
 
