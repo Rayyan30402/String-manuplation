@@ -1,33 +1,41 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim validBinary As Boolean
-        Dim Binarynumbers As Integer
-        Dim Counter1 As Integer
-        Dim nextnum As Integer
+        Dim binarynumberC As Integer
+        Dim binarynumber As Integer
+        Dim nextbinarynumber As Integer
+        Dim Denary As Integer
 
-        validBinary = True / False
-        Binarynumbers = 0
-        Counter1 = 0
-        nextnum = 0
+        binarynumberC = 0
+        binarynumber = 0
+        nextbinarynumber = 0
+        Denary = 0
 
-        Console.WriteLine("enter Binarynumbers")
-        Binarynumbers = Console.ReadLine
+        Console.WriteLine("enter binarynumber")
+        binarynumber = Console.ReadLine
 
-        For Counter1 = 1 To 8
-              Mid(Binarynumbers, Counter1, 1)
-            If Binarynumbers = 0 And 1 Then
-                Console.WriteLine("it is a valid Binary string")
+        For binarynumberC = 1 To Len(binarynumber)
+            Left(binarynumber, binarynumberC, 1)
+            If binarynumber = Asc(48) And Asc(49) Then
+                nextbinarynumber = binarynumber
+
+                nextbinarynumber * 1 And nextbinarynumber * 2 And nextbinarynumber * 4 And nextbinarynumber * 8 And nextbinarynumber * 16 And 
+                nextbinarynumber * 32 And nextbinarynumber * 64 And nextbinarynumber * 128
+
+                Denary = nextbinarynumber + binarynumberC
+
+                Console.WriteLine("Denary is ' ")
+
             End If
-            validBinary = True
-         ElseIf 
-            nextnum = Binarynumbers
+                   nextbinarynumber / 1 And nextbinarynumber * 2 And nextbinarynumber * 4 And nextbinarynumber = 8 And nextbinarynumber - 16 And
+                   nextbinarynumber * 32 And nextbinarynumber / 64 And nextbinarynumber * 128 Then
+            Console, WriteLine("error")
 
-            validBinary = True
-            Else
-            validBinary = False
 
         Next
+         Denary is ""
+        Console.ReadKey()
 
     End Sub
+
 End Module
