@@ -1,43 +1,33 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim String1 As String
-        Dim String2 As String
-        Dim String3 As String
-        Dim nextchar1 As String
-        Dim nextchar2 As String
-        Dim counter1 As Integer
-        Dim counter2 As Integer
-        Dim haschanged As Boolean
+        Dim validBinary As Boolean
+        Dim Binarynumbers As Integer
+        Dim Counter1 As Integer
+        Dim nextnum As Integer
 
-        String1 = ""
-        String2 = ""
-        String3 = ""
-        nextchar1 = ""
-        nextchar2 = ""
-        counter1 = 0
-        counter2 = 0
-        haschanged = True / False
+        validBinary = True / False
+        Binarynumbers = 0
+        Counter1 = 0
+        nextnum = 0
 
-        For counter1 = 1 To Len(String1)
-            nextchar1 = Mid(String1, counter1, 1)
-            String3 = ""
-            haschanged = False
-               counter2 = 1 To Len(String2)
-            nextchar2 = Mid(String2, counter2, 1)
-            If nextchar2 = nextchar1 Then
+        Console.WriteLine("enter Binarynumbers")
+        Binarynumbers = Console.ReadLine
 
-                haschanged = False
-            Else
-                haschanged = True
-                    console.write("String3="'String3 & nextxhar1')
+        For Counter1 = 1 To 8
+              Mid(Binarynumbers, Counter1, 1)
+            If Binarynumbers = 0 And 1 Then
+                Console.WriteLine("it is a valid Binary string")
             End If
+            validBinary = True
+         ElseIf 
+            nextnum = Binarynumbers
 
-
+            validBinary = True
+            Else
+            validBinary = False
 
         Next
-        String2 = String3
-        Console.ReadKey()
-    End Sub
 
+    End Sub
 End Module
